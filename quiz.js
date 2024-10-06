@@ -27,4 +27,3 @@ const submitButton = document.getElementById("submit-answer");
 
 // Check for adding an event listener to the “Submit Answer” button
 submitButton.addEventListener("click", checkAnswer);
-
