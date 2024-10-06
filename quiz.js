@@ -8,12 +8,12 @@ function checkAnswer() {
 
     // Check if an answer was selected (Handling case where no answer is selected)
     if (userAnswer) {
-        // Check for comparison of the user's answer with the correct answer
+        // Compare the user's answer with the correct answer (Check for comparison)
         if (userAnswer.value === correctAnswer) {
-            // Providing feedback based on the comparison (correct answer)
+            // Provide feedback based on the comparison (correct answer)
             document.getElementById("feedback").textContent = "Correct! Well done.";
         } else {
-            // Providing feedback based on the comparison (incorrect answer)
+            // Provide feedback based on the comparison (incorrect answer)
             document.getElementById("feedback").textContent = "That's incorrect. Try again!";
         }
     } else {
@@ -22,9 +22,8 @@ function checkAnswer() {
     }
 }
 
-// Check for retrieval of the “submit-answer” button
+// Retrieve the “submit-answer” button (Check for retrieval)
 const submitButton = document.getElementById("submit-answer");
 
-// Check for adding an event listener to the “Submit Answer” button
+// Add an event listener to the “Submit Answer” button (Check for event listener)
 submitButton.addEventListener("click", checkAnswer);
-
