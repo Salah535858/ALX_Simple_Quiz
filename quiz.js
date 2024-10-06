@@ -1,29 +1,33 @@
 // Define the checkAnswer function
 function checkAnswer() {
-    // Correct answer (Check for correct answer assignment)
+    // Correct answer
     const correctAnswer = "4";
-    
-    // Get the user's selected answer (Check for retrieving the user’s answer)
+
+    // Retrieve the user's selected answer
     const userAnswer = document.querySelector('input[name="quiz"]:checked');
 
-    // Check if an answer was selected (Handling case where no answer is selected)
+    // Check if an answer was selected
     if (userAnswer) {
-        // Compare the user's answer with the correct answer (Check for comparison)
+        // Compare the user's answer with the correct answer
         if (userAnswer.value === correctAnswer) {
-            // Provide feedback based on the comparison (correct answer)
+            // Provide feedback for the correct answer
             document.getElementById("feedback").textContent = "Correct! Well done.";
         } else {
-            // Provide feedback based on the comparison (incorrect answer)
+            // Provide feedback for the incorrect answer
             document.getElementById("feedback").textContent = "That's incorrect. Try again!";
         }
     } else {
-        // Feedback if no answer is selected
+        // If no answer is selected, provide feedback
         document.getElementById("feedback").textContent = "Please select an answer.";
     }
 }
 
-// Retrieve the “submit-answer” button (Check for retrieval)
+// Retrieve the submit button and add event listener
 const submitButton = document.getElementById("submit-answer");
 
-// Add an event listener to the “Submit Answer” button (Check for event listener)
-submitButton.addEventListener("click", checkAnswer);
+// Check if the submit button exists and add the event listener
+if (submitButton) {
+    submitButton.addEventListener("click", checkAnswer);
+} else {
+    console.error("Submit button not found!");
+}
